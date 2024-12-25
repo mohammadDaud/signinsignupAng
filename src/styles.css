@@ -1,1 +1,175 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body {
+  font-family: Calibri !important;
+  overflow: hidden !important;
+}
+a {
+  cursor: pointer;
+}
+.app-container {
+  min-height: 320px;
+  overflow: hidden;
+}
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+.toast {
+  opacity: 1 !important;
+  background-color: green;
+}
+.required:after {
+  content: " *" !important;
+  color: red !important;
+}
+.g-recaptcha {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+}
+.break {
+  word-break: break-all;
+}
+.dt-buttons {
+  margin-top: 10px;
+}
+.swal2-styled {
+  padding: 8px !important;
+}
+.bold {
+  font-weight: bold;
+}
+input:focus {
+  background-color: transparent !important;
+}
+.menu-perimissions-switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+.menu-perimissions-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.menu-perimissions-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #C8C8C8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.menu-perimissions-slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.menu-perimissions-input:checked + .menu-perimissions-slider {
+  background-color: #007bff;
+}
+.menu-perimissions-input:focus + .menu-perimissions-slider {
+  box-shadow: 0 0 1px #007bff;
+}
+.menu-perimissions-input:checked + .menu-perimissions-slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+/* Rounded sliders */
+.menu-perimissions-slider.menu-perimissions-round {
+  border-radius: 34px;
+}
+.menu-perimissions-slider.menu-perimissions-round:before {
+  border-radius: 50%;
+}
+p-table tr.ng-star-inserted {
+  height: 35px !important;
+}
+p-table .p-datatable-thead {
+  background-color: #343a40 !important;
+  color: white !important;
+}
+p-table .p-datatable-thead > tr > th {
+  padding: 0.3rem 1rem !important;
+  text-align: center !important;
+}
+p-table .p-datatable-tbody > tr > td {
+  padding: 0.3rem 1rem !important;
+  text-align: center !important;
+  font-size: 14px !important;
+}
+.p-steps-number {
+  color: #FFFFFF;
+  border: 1px solid #005A7F;
+  background: #005A7F !important;
+  min-width: 3rem;
+  height: 3rem;
+  line-height: 2rem;
+  font-size: 1.143rem;
+  z-index: 1;
+  border-radius: 50%;
+}
+.drop-down-container {
+  max-height: 185px;
+  overflow-y: auto;
+}
+.drop-down-container .custom-list-item {
+  font-size: 10px !important;
+  padding: 0.2rem 1rem;
+}
+.drop-down-container .custom-list-item input {
+  width: 11px !important;
+  height: 11px !important;
+}
+.drop-down-container .custom-list-item label {
+  font-size: small !important;
+}
+.gradient-btn {
+  color: white;
+  background: linear-gradient(0deg, #005a7f 0%, #009fe3 100%) !important;
+}
+.terminal-dialog .p-dialog-header {
+  display: none !important;
+}
+.terminal-dialog .p-dialog .p-dialog-content {
+  padding: 0 !important;
+}
+.help-link:hover {
+  text-decoration: underline !important;
+}
+.p-calendar-timeonly {
+  width: 100% !important;
+}
+.add-terminal-all-check-input {
+  width: 15px !important;
+  height: 15px !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.add-terminal-all-check-label {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  margin-left: 10px !important;
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+

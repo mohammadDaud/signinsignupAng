@@ -1,0 +1,131 @@
+<style>
+    ::ng-deep .audit-drop {
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
+</style>
+<div fxLayout="row" style="height: 100vh">
+    <!-- sidenav -->
+    <div fxFlex='18' class="sidenav">
+        <div class="mx-3 mt-2" style="margin-bottom: -40px;">
+            <a routerLink="/dash/home" (click)="homeClick()">
+                <img src="assets/logo.png" alt="" class="image">
+            </a>
+        </div>
+        <!-- navbar links -->
+        <div class="links">
+            <ul>
+                <li  routerLinkActive="active" class="mb-2" style="margin-top: 36px;">
+
+                    <a routerLink="/dash/home" (click)="homeClick()" skipLocationChange>
+                        <img src="assets/menues/home.svg" alt="" style="margin-right:8px;width: 17px;"
+                            class="image-icon">
+                        <span>Home</span>
+                    </a>
+
+                </li>
+                <ng-container *ngFor="let menu of userMenu; let i = index">
+                    <ng-container *ngIf="menu.is_parent">
+                        <li *ngIf="!menu.is_hidden" [class.opened]="menu.opened" [ngClass]="{'active': menu.opened}"
+                             style="border-top: 0.5px solid #EBEBEB;">
+                            <div fxFlex="87">
+                                <a *ngIf="menu.is_parent">
+                                    <img [src]="'assets/menues/'+menu.key+'.svg'" alt=""
+                                        style="margin-right:8px;width: 17px;" class="image-icon">
+                                    <span *ngIf="tog" fxFlex>{{menu.name}}</span>
+                                </a>
+                            </div>
+                        </li>
+
+                        <ul class="underNav" style="padding-left: 22px;" *ngIf="menu.opened">
+                            <li routerLinkActive="active" 
+                                *ngFor="let child of menu.subMenu" skipLocationChange>
+
+                                <a routerLink="{{child.url}}"  skipLocationChange>
+
+                                    <span class="side-border-line"><span
+                                            class="bottom-line">{{child.name}}</span></span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </ng-container>
+                    <ng-container *ngIf="!menu.is_parent">
+                        <li routerLinkActive="active" *ngIf="!menu.is_hidden" [class.opened]="menu.opened"
+                            style="border-top: 0.5px solid #EBEBEB;">
+                            <a [routerLink]="menu.url" skipLocationChange>
+                                <span fxFlex>{{menu.name}}</span>
+                            </a>
+                        </li>
+                    </ng-container>
+                </ng-container>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div fxFlex='82' style=" overflow-y: auto;" class="mainScr">
+        <div class=" mycard">
+            <div fxLayout="row" fxLayoutAlign="start center" class="mx-4">
+                <div fxFlex="50"> </div>
+                <div fxFlex="21.7" fxLayoutAlign="end end" class="feed"> </div>
+                <div fxFlex="6" fxLayoutAlign="end end" class="feed">
+                    <a [matMenuTriggerFor]="menuA">Help?</a>
+                    <mat-menu #menuA="matMenu" class="audit-drop">
+                        <div class="mx-1 ml-1 mb-2" style="color: #CBCBCB;
+                        font-size: 18px;margin-left: 8px !important;">Help</div>
+                        <div class="mx-2">
+                            <div (click)=changeStatus(1) [ngClass]="status==1 ? 'drop-active' : 'drop-normal'">
+                                <a (click)="openChangePasswordModal()">Change Password</a>
+                            </div>
+                        </div>
+                        <div class="mx-2">
+                            <div (click)=changeStatus(3) [ngClass]="status==3 ? 'drop-active' : 'drop-normal'">
+                                <a (click)="goToSecurity()">Security Questions</a>
+                            </div>
+                        </div>
+                        <div class="mx-2">
+                            <div (click)=changeStatus(4) [ngClass]="status==4 ? 'drop-active' : 'drop-normal'">
+                                <a (click)="openModalHelpUs()">Feedback</a>
+                            </div>
+                        </div>
+                        <div class="ml-3 mt-1 mb-2">
+                            <div (click)="preventDefault($event)">
+                                <a style="color: #005A7F;font-size: 18px;" (click)="openHelp=!openHelp"
+                                    [ngStyle]="{'color': openHelp ? '#005A7F' : '#6C6C6C' }">Need Help?</a>
+                            </div>
+                        </div>
+                        <ng-container *ngIf="openHelp">
+                            <div class="mx-4">
+                                <div (click)=changeStatus(6) [ngClass]="status==6 ? 'drop-active' : 'drop-normal'">
+                                    <a (click)="openModalWriteUs()">Write to us</a>
+                                </div>
+                            </div>
+                            <div class="mx-4">
+                                <div (click)=changeStatus(7) [ngClass]="status==7 ? 'drop-active' : 'drop-normal'">
+                                    <a (click)='openModalcallBack()'>Request a Callback</a>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </mat-menu>
+                </div>
+                <div fxFlex="4" fxLayoutAlign="end end">
+                    <img src="assets/Group123.png" alt="" style="width: 21px;" [matMenuTriggerFor]="menu">
+                    <mat-menu #menu="matMenu">
+                        <hr>
+                        <div style="cursor: pointer;" (click)="logout()" class="mx-4">
+                            <span style="font-size: 18px;">Signout?</span>
+                        </div>
+                    </mat-menu>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div style="padding-top: 65px;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

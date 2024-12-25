@@ -1,0 +1,277 @@
+body {
+    font-family: Calibri !important;
+  }
+  #chart {
+    max-width: 380px;
+    margin: 35px auto;
+    padding: 0;
+  }
+  .header h2 {
+    font-family: Calibri !important;
+    color: #525252;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .image {
+    width: 27px;
+    margin-right: 13px;
+  }
+  ::ng-deep .mat-form-field {
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: -20px;
+  }
+  .logo {
+    width: 16px;
+    margin-right: 10px;
+  }
+  .logo-drop {
+    width: 32px;
+    height: 29px;
+  }
+  .button {
+    width: 100%;
+    background-color: #125A7F;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+  mat-card {
+    min-height: 153px;
+  }
+  .des p {
+    border-radius: 50px;
+    color: #687784;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: Calibri !important;
+  }
+  .des p .mat-icon {
+    vertical-align: text-top;
+    margin-top: 1px;
+  }
+  .des .para {
+    margin-bottom: 15px;
+  }
+  .material-icons {
+    font-size: 19px;
+    color: #BFBFBF;
+  }
+  #chart p {
+    color: #525252;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .detail p {
+    font-size: 14px;
+  }
+  ::ng-deep .mat-menu-panel {
+    min-width: auto !important;
+    max-width: auto;
+  }
+  .drop {
+    font-size: 17px;
+  }
+  .drop button {
+    width: 66px;
+    height: 30px;
+    font-size: 13px;
+    border: 0.8px solid #125A7F;
+  }
+  ::ng-deep.mat-radio-label-content {
+    font-size: 13px;
+  }
+  ::ng-deep.mat-radio-outer-circle {
+    width: 16px;
+    height: 16px;
+  }
+  table thead tr {
+    border-top: hidden;
+  }
+  table thead tr td {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #B8B8B8;
+  }
+  table tbody tr td {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #525252;
+  }
+  .header .form-control {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .buttonB {
+    width: 66px;
+    height: 30px;
+    font-size: 16px;
+    padding-top: 2px;
+    border: 0.8px solid #125A7F;
+  }
+  .buttonA {
+    width: 66px;
+    height: 30px;
+    font-size: 16px;
+    padding-top: 2px;
+    background-color: #125A7F;
+    color: #FFFFFF;
+  }
+  .heding {
+    color: #525252;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .b-color {
+    background-color: #F7FAFC;
+  }
+  .check {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .text-box {
+    height: 27px;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  .legends {
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #6A6A6A;
+  }
+  .legend-box {
+    width: 13.68px;
+    height: 12.82px;
+    background-color: #71DA86;
+    color: #71DA86;
+    font-size: 5px;
+    margin-top: 8px;
+  }
+  .legend-label {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: #8E8E8E;
+  }
+  .tabel-round {
+    width: 29px;
+    height: 29px;
+    border-radius: 50px;
+  }
+  .td-btn {
+    border-radius: 50px;
+    padding: 7px 20px 7px 20px;
+    width: 238px;
+  }
+  select > option:hover {
+    color: #525252;
+    cursor: pointer;
+  }
+  :host ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #FF9900;
+  }
+  :host ::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #FF9900;
+  }
+  :host ::ng-deep.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #FF9900;
+  }
+  ::ng-deep .mat-select-panel {
+    max-height: none !important;
+  }
+  ::ng-deep .mat-option-text {
+    display: inline-block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+  }
+  :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 4px 0 1em 0 !important;
+  }
+  :host ::ng-deep mat-select-arrow {
+    margin: 8px 4px 0px 0px !important;
+  }
+  ::ng-deep .cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: -25px !important;
+  }
+  ::ng-deep .mat-select-value-text {
+    color: #525252 !important;
+    font-family: Calibri !important;
+    font-size: 14px;
+  }
+  ::ng-deep input.mat-input-element {
+    color: #525252 !important;
+    font-family: Calibri !important;
+    font-size: 14px;
+  }
+  ::ng-deep .mat-select-placeholder {
+    color: #525252 !important;
+    font-family: Calibri !important;
+    font-size: 14px;
+  }
+  ::ng-deep .mat-option-text {
+    color: #525252 !important;
+    font-family: Calibri !important;
+    font-size: 16px;
+  }
+  .no-data {
+    color: #212529 !important;
+    font-family: Calibri !important;
+    font-size: 18px;
+  }
+  ::ng-deep .apexcharts-text tspan {
+    font-family: Calibri;
+    color: #49545a !important;
+    font-size: 14px;
+  }
+  

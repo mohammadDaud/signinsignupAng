@@ -1,0 +1,119 @@
+<div class="m-auto background-setting">
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex=40>
+            <img src="assets/logo.png" alt="" style="width:315px;margin-left:18%; margin-top: 26%;height: 170px;">
+        </div>
+        <div fxFlex=60>
+            <mat-card style=" position: absolute;top: 50%;left: 64%;width: 40%;transform: translate(-50%, -50%);">
+                <div>
+                    <div class="text-center">
+                        <h2 class="top-heading" style="color: #005A7F;">Create Your Account</h2>
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin" autocomplete="off">
+                        <div class="text-center mb-5 mt-5">
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" data-validate="Please enter firstName">
+                                <input matInput type="text" formControlName="firstName" id="firstName"
+                                    placeholder="First Name" required
+                                    [ngClass]="{ 'is-invalid': f.firstName.touched && f.firstName.errors }">
+                            </mat-form-field>
+                            <div *ngIf="f.firstName.touched && f.firstName.errors" class="alert alert-danger col-md-4"
+                                role="alert"  style="font-size: 10px;">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                <div *ngIf="f.firstName.errors.pattern">Only alphabets are allowed</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" data-validate="Please enter lastName">
+                                <input matInput type="text" formControlName="lastName" id="lastName"
+                                    placeholder="Last Name" required
+                                    [ngClass]="{ 'is-invalid': f.lastName.touched && f.lastName.errors }">
+                            </mat-form-field>
+                            <div *ngIf="f.lastName.touched && f.lastName.errors" class="alert alert-danger col-md-4"
+                                role="alert"  style="font-size: 9px;">
+                                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                <div *ngIf="f.lastName.errors.pattern">Only alphabets are allowed</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" data-validate="Please enter Email">
+                                <input matInput type="email" formControlName="email" id="email" placeholder="Email"
+                                    required [ngClass]="{ 'is-invalid': f.email.touched && f.email.errors }">
+                            </mat-form-field>
+                            <div *ngIf="f.email.touched && f.email.errors"  style="font-size: 9px;" class="alert alert-danger col-md-4" role="alert">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                                <div *ngIf="f.email.errors.pattern">Email Id is invalid</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" data-validate="Please enter password">
+                                <input matInput type="password" formControlName="password" placeholder="Password" id="password" minlength="5" required>
+                            </mat-form-field>
+                            <div class="alert alert-danger col-md-4"  style="font-size: 9px;" role="alert" *ngIf="f.password.touched && f.password.errors">
+                                Password is required
+                            </div>
+                            <div class="alert alert-danger col-md-4" style="font-size: 9px;" role="alert" *ngIf="f.password.hasError('minlength')">
+                                Password must be at least 5 characters
+                            </div>
+                        </div>
+                        <!-- <div class="form-group mt-3">
+                            <mat-select formControlName="country" placeholder="Select Country"
+                                [ngClass]="{ 'is-invalid': f.country.touched && f.country.errors }"
+                                (selectionChange)="onCountryChange($event)">
+                                <mat-option *ngFor="let country of countries" [value]="country.id">
+                                    {{country.name}}
+                                </mat-option>
+                            </mat-select>
+                            <div *ngIf="f.country.touched && f.country.errors" class="alert alert-danger" role="alert">
+                                <div *ngIf="f.country.errors.required">Country is required</div>
+                            </div>
+
+                        </div> -->
+                        <!-- <div class="form-group mt-4">
+                            <mat-select formControlName="state" placeholder="Select State"
+                                [ngClass]="{ 'is-invalid': f.state.touched && f.state.errors }"
+                                (selectionChange)="onStateChange($any($event))">
+                                <mat-option *ngFor="let state of stateList" [value]="state.id">
+                                    {{state.name}}
+                                </mat-option>
+                            </mat-select>
+                            <div *ngIf="f.state.touched && f.state.errors" class="alert alert-danger" role="alert">
+                                <div *ngIf="f.state.errors.required">State is required</div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="form-group mt-4">
+                            <mat-select formControlName="city" placeholder="Select City"
+                                [ngClass]="{ 'is-invalid': f.city.touched && f.city.errors }">
+                                <mat-option *ngFor="let city of cityList" [value]="city.id">
+                                    {{city.name}}
+                                </mat-option>
+                            </mat-select>
+                            <div *ngIf="f.city.touched && f.city.errors" class="alert alert-danger" role="alert">
+                                <div *ngIf="f.city.errors.required">City is required</div>
+                            </div>
+                        </div> -->
+                        <div class="alert alert-danger" *ngIf="response">
+                            {{response}}
+                        </div>
+                        <div class="form-group text-center mt-4">
+                            <button class="btn button mt-2">Register</button>
+                        </div>
+                        <div class="form-group text-center mt-4">Already have an Account?
+                            <a style="color: #005A7F; margin-top: -8px;" (click)="goBack()" skipLocationChange
+                                class="btn btn-link text-black help-link">Login</a>
+                        </div>
+                    </form>
+
+                </div>
+
+            </mat-card>
+
+
+        </div>
+    </div>
+
+
+
+</div>

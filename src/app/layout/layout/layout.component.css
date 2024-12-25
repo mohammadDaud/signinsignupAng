@@ -1,0 +1,323 @@
+div {
+    transition: 0.7s;
+  }
+  .sidenav {
+    opacity: 1;
+    height: 100vh;
+    background-color: #F7FAFC;
+    overflow-y: auto;
+  }
+  .sidenav ::-webkit-scrollbar {
+    display: none;
+  }
+  .image {
+    height: 90px;
+    width: 168px;
+  }
+  .nav-hed {
+    background-color: #5389DC;
+  }
+  .nav-hed h1 {
+    color: #FFFFFF;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+  .links ul {
+    margin-left: -18px;
+  }
+  .links li.active {
+    position: relative;
+  }
+  .links li.active a span {
+    color: #005A7F;
+    font-weight: 600;
+  }
+  .links ul li {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .links ul li a {
+    padding: 8px 0 8px 0px;
+    text-align: left;
+    color: #212529;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .links ul li:hover {
+    position: relative;
+  }
+  .links ul li:hover a {
+    color: #005A7F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .links ul li:hover a .image-icon {
+    filter: invert(100%) sepia(100%) saturate(5665%) hue-rotate(178deg) brightness(80%) contrast(116%);
+  }
+  li.active {
+    position: relative;
+  }
+  li.active a {
+    font-weight: 600;
+  }
+  li.active a span {
+    color: #005A7F;
+  }
+  li.active a .image-icon {
+    filter: invert(100%) sepia(100%) saturate(5665%) hue-rotate(178deg) brightness(80%) contrast(116%);
+  }
+  .mycard {
+    height: 75px;
+    text-align: right;
+    position: fixed;
+    z-index: 999;
+    width: 82%;
+    background: white;
+    height: 62px;
+    border-bottom: 1px solid #E3E8EE;
+  }
+  .mycard a {
+    font-family: Calibri;
+    font-size: 17px;
+    font-style: normal;
+    color: #005A7F;
+  }
+  .mycard1 {
+    height: 59px;
+    text-align: right;
+    position: fixed;
+    z-index: 999999;
+    width: 95%;
+  }
+  .mycard1 ul li {
+    display: inline-block;
+    list-style: none;
+  }
+  .mycard1 ul li p {
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  .user {
+    width: 52px;
+    padding-top: 3px;
+    border-radius: 50px;
+  }
+  .notification {
+    width: 28px;
+    padding-bottom: 10px;
+  }
+  .chat {
+    width: 24px;
+    padding-bottom: 2px;
+  }
+  .side-menu-icon {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    margin-right: 17px;
+    transition: 0s;
+  }
+  :host ::ng-deep.cdk-overlay-container {
+    position: fixed;
+    z-index: 999999999;
+    margin-top: 26px;
+    margin-left: 3%;
+  }
+  .activate-account {
+    color: white;
+    background: #FF5B52;
+    padding: 3px 10px 4px 10px;
+    border-radius: 17px;
+    font-family: Calibri;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .links .underNav li {
+    padding: 3px 0px 6px 0px;
+    border-bottom: none;
+  }
+  .links .underNav li a {
+    font-size: 16px;
+    color: #666666;
+  }
+  .links .underNav li a .bottom-line {
+    margin-left: 0px;
+  }
+  .links .underNav li.active {
+    position: relative;
+  }
+  .links .underNav li.active a {
+    font-size: 16px;
+  }
+  .links .underNav li.active a .side-border-line {
+    color: #005A7F;
+    font-weight: 500;
+    border-left: 4px solid;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: 17px;
+  }
+  .links .underNav li.active a .bottom-line {
+    background: #E3EDF2;
+    padding: 6px 20px 6px 8px;
+    border-radius: 4px;
+    margin-left: 0px;
+  }
+  .links .underNav li:hover {
+    position: relative;
+  }
+  .links .underNav li:hover a {
+    font-size: 16px;
+  }
+  .links .underNav li:hover a .side-border-line {
+    color: #005A7F;
+    font-weight: 500;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-left: 17px;
+  }
+  .links .underNav li:hover a .bottom-line {
+    background: #E3EDF2;
+    padding: 6px 20px 6px 8px;
+    border-radius: 4px;
+    margin-left: 0px;
+  }
+  .links .underNav a {
+    margin-left: 0px;
+    padding: 8px 0 8px 0px;
+  }
+  .links .underNav span {
+    margin-left: 33px;
+  }
+  #search {
+    width: 100%;
+    background-repeat: no-repeat;
+    padding: 19px 9px 17px 26px;
+    background-position: 0px 12px;
+    background-size: 17px;
+    letter-spacing: 0;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 20px;
+    font-family: Calibri;
+    background-color: transparent;
+  }
+  .form-control:focus {
+    border-color: white;
+  }
+  .feed a {
+    font-family: Calibri;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mainScr {
+    overflow-y: auto;
+  }
+  .mainScr ::-webkit-scrollbar {
+    display: none;
+  }
+  :host::ng-deep.dropdown-menu {
+    position: absolute;
+    top: 80% !important;
+    left: 85% !important;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+  }
+  .drop-active {
+    border: 1px solid #005A7F;
+    border-radius: 5px;
+    background: #FDFDFD;
+    padding: 4px 3px 6px 7px;
+  }
+  .drop-active a {
+    color: #005A7F;
+    font-weight: lighter;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .drop-normal {
+    padding: 4px 3px 6px 7px;
+  }
+  .drop-normal a {
+    color: #6C6C6C;
+    font-weight: lighter;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .drop-normal:hover {
+    border: 0.3px solid #005A7F;
+    background: #FDFDFD;
+    border-radius: 5px;
+    padding: 4px 3px 6px 7px;
+  }
+  .drop-normal:hover a {
+    color: #005A7F;
+    font-weight: lighter;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  :host::ng-deep.cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  .test > ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background: #FF5B52 !important;
+  }
+  .prod > ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background: #005A7F !important;
+  }
+  .lab {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #525252;
+    font-family: Calibri;
+  }
+  ::ng-deep .help {
+    min-width: 200px !important;
+    max-width: 200px !important;
+  }
+  

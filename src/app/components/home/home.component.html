@@ -1,0 +1,78 @@
+<div fxLayout="row">
+    <div class="mx-3 mt-1" fxFlex=100>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="header mb-4">
+        <div fxFlex='40'>
+          <h2>Dashboard</h2> 
+        </div>
+        <div fxFlex='12' style="margin-top: -3px;">
+        </div>
+      </div>
+      <!-- <app-dashboard-cards *ngIf="cahrtsload" [cardsData]='cardsData'></app-dashboard-cards> -->
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+        <div fxFlex='19'>
+          <mat-card>
+            <div class="m-1" class="des">
+  
+              <p style="color:#6A7EE8">Total Finding</p>
+              <div>
+                <p class="para">
+                  <img class="logo" src="assets/image/Group162.png">
+                  <span style="font-size: 22px;">{{getCount("TOTAL")}}</span>
+                </p>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex='19'>
+          <mat-card>
+            <div class="m-1" class="des">
+              <p style="color:#F47585">Open</p>
+  
+              <div>
+                <p class="para">
+                  <img class="logo" src="assets/image/Group162.png">
+                  <span style="font-size: 22px;">{{getCount("OPEN")}}</span>
+                </p>
+  
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex='19'>
+          <mat-card>
+            <div class="m-1" class="des">
+              <p style="color:#FFA500">Pending</p>
+  
+              <div>
+                <p class="para">
+                  <img class="logo" src="assets/image/Group162.png">
+                  <span style="font-size: 22px;">{{getCount("PENDING")}}</span>          
+                    </p>
+  
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex='19'>
+          <mat-card>
+            <div class="m-1" class="des">
+              <p style="color:#71DA86">Closed</p>
+  
+              <div>
+                <p class="para">
+                  <img class="logo" src="assets/image/Group162.png">
+                  <span style="font-size: 22px;">{{getCount("CLOSED")}}</span>          
+                
+                </p>
+  
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+      <!-- <app-dashboard-charts *ngIf="cahrtsload==true && lineChartLoad==true" [chartsData]='chartsData' [lineChartData]='lineChartData'(flag)="getflag($event) "></app-dashboard-charts> -->
+      </div>
+      </div>
+      <!--The content below is only a placeholder and can be replaced.-->
+
+  

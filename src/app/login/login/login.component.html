@@ -1,0 +1,52 @@
+<div class="m-auto background-setting">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex=40>
+      <img src="assets/logo.png" alt="" style="width:315px;margin-left:18%; margin-top: 26%;height: 170px;">
+    </div>
+    <div fxFlex=60>
+      <mat-card style=" position: absolute;top: 50%;left: 64%;width: 40%;transform: translate(-50%, -50%);">
+        <div>
+          <div class="text-center">
+            <h2 class="top-heading" style="color: #005A7F;">SIGNIN</h2>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin" autocomplete="off">
+            <div class="form-group mt-4">
+            <mat-form-field class="example-full-width" data-validate="Please enter email">
+              <input matInput type="text" id="email" formControlName="email" placeholder="Email" required
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            </mat-form-field>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">User Id is required</div>
+            </div>
+          </div>
+          <div class="form-group mt-4">
+            <mat-form-field class="example-full-width" data-validate="Please enter password">
+              <input matInput type="password" formControlName="password" placeholder="Password" id="password" required>
+            </mat-form-field>
+            <div class="alert alert-danger" role="alert" *ngIf="submitted && submitted && f.password.errors">
+              Password is required
+            </div>
+          </div>
+            <div class="example-label mt-2 mb-2">
+              Forgot Password ?<a [routerLink]="['/forget']" routerLinkActive="router-link-active" mat-button
+                color="primary" class="btn btn-link text-black">click here
+              </a>
+            </div>
+            <div class="alert alert-danger" *ngIf="loginFailed">
+              {{ error }}
+            </div>
+            <div class="form-group text-center">
+              <button class="btn button mt-2" mat-button>
+                <span style="color: white;">Login</span>
+              </button>
+            </div>
+            <div class="form-group text-center mt-4">If you are new user please
+              <a style="color: #005A7F; margin-top: -8px;" mat-flat-button (click)="register()" skipLocationChange
+                class="btn btn-link text-black help-link">Sign Up</a>
+            </div>
+          </form>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
